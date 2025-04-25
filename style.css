@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600;700&display=swap');
+
+:root {
+    --cor-principal: #95dd95;
+    --cor-secundaria: #4eac65;
+    --cor-destaque: #72d181;
+    --cor-fundo: #e4f8ed;
+    --cor-hover: #78c378;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0; 
+    line-height: 1.6;
+}
+
+h1, h2, h5 {
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+.lead, .btn-link {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+.btn-link:hover {
+    color: var(--cor-hover);
+    text-decoration: underline;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(85, 190, 99, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.rounded-circle {
+    border: 3px solid var(--cor-destaque);
+    transition: transform 0.3s ease;
+}
+
+.rounded-circle:hover {
+    transform: rotate(5deg) scale(1.05);
+}
